@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gallery - Smart Home Security</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Gallery</p>
+          <h1>ESP32-CAM Images</h1>
+          <p class="subtitle">View uploaded alarm images and camera status.</p>
+        </div>
+      </header>
+      <section class="card gallery-grid" id="gallery-grid">
+        <p class="log-empty">Loading images...</p>
+      </section>
+      <section class="card button-block">
+        <a class="button button-secondary" href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+      </section>
+    </div>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>History - Smart Home Security</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">History</p>
+          <h1>Alarm History</h1>
+          <p class="subtitle">Review sensor events, uploaded photos, and control actions.</p>
+        </div>
+      </header>
+      <section class="card">
+        <div class="log-table-wrapper">
+          <table class="log-table">
+            <thead>
+              <tr><th>Time</th><th>Event</th><th>Description</th><th>Photo</th></tr>
+            </thead>
+            <tbody id="history-table-body">
+              <tr><td colspan="4" class="log-empty">Loading...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section class="card button-block">
+        <a class="button button-secondary" href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+      </section>
+    </div>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  </body>
+</html>

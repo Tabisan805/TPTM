@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smart Home Security Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Smart Home</p>
+          <h1>Security Dashboard</h1>
+          <p class="subtitle">Theo doi trang thai an ninh, cam bien va camera theo thoi gian thuc.</p>
+        </div>
+      </header>
+
+      <section class="card status-grid">
+        <div><h2>System Status</h2><p id="system-status">Loading...</p></div>
+        <div><h2>Motion Sensor</h2><p id="motion-status">Loading...</p></div>
+        <div><h2>Door Sensor</h2><p id="door-status">Loading...</p></div>
+        <div><h2>Camera Status</h2><p id="camera-status">Loading...</p></div>
+      </section>
+
+      <section class="card action-panel">
+        <div>
+          <h2>Che do bao ve</h2>
+          <span id="state-badge" class="state-badge">Loading</span>
+        </div>
+        <div class="actions-row">
+          <button id="arm-button" class="button">ARM</button>
+          <button id="disarm-button" class="button button-secondary">DISARM</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Recent Events</h2>
+        <p class="subtitle">Lich su canh bao, anh chup va thay doi trang thai moi nhat.</p>
+        <div class="log-table-wrapper">
+          <table class="log-table">
+            <thead>
+              <tr><th>Time</th><th>Event</th><th>Description</th><th>Photo</th></tr>
+            </thead>
+            <tbody id="history-table-body">
+              <tr><td colspan="4" class="log-empty">Loading...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Navigation</h2>
+        <div class="button-group">
+          <a class="button button-secondary" href="{{ url_for('history_page') }}">History Page</a>
+          <a class="button button-secondary" href="{{ url_for('gallery_page') }}">Gallery Page</a>
+        </div>
+      </section>
+    </div>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  </body>
+</html>
