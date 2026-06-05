@@ -4,7 +4,7 @@
     </a>
 </h2>
 <h2 align="center">
-   HỆ THỐNG CẢNH BÁO THỜI GIAN THỰC
+   Smart Home Security System
 </h2>
 <div align="center">
     <p align="center">
